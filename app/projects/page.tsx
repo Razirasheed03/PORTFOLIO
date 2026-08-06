@@ -31,11 +31,16 @@ import {
   SiRedis,
   SiJsonwebtokens,
   SiNextdotjs,
+  SiMongoose,
+  SiReactquery,
+  SiVite,
+  SiZod,
+  SiNestjs,
 } from "react-icons/si";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 /* =======================
-   ALL PROJECTS (5 TOTAL)
+   ALL PROJECTS (6 TOTAL)
 ======================= */
 
 const projects = [
@@ -43,81 +48,130 @@ const projects = [
   {
     title: "Moestay Property Booking Platform",
     description:
-"Contributed as a frontend developer to an Airbnb-style property booking platform using Next.js and TypeScript. Built scalable, performance-optimized UI components and page flows, and integrated backend REST APIs using RTK Query for efficient data fetching, caching, and state synchronization. Implemented JWT-based authentication flows and ensured consistent UX across listing, booking, and admin-facing interactions while following industry-standard frontend architecture.",
+      "Contributed as a Full Stack Developer to an Airbnb-style property booking platform, engineering scalable frontend modules with Next.js and backend features within a NestJS NX monorepo. Designed reusable, role-driven workflows and integrated REST APIs using RTK Query for optimized caching and state synchronization. Worked on property onboarding, booking workflows, and production-grade business logic while following modular architecture, API-first development, and maintainable code practices.",
     technologies: [
       "Next.js",
       "TypeScript",
-      "Redux Toolkit",
+      "NestJS",
+      "REST APIs",
       "RTK Query",
+      "Redux Toolkit",
       "Tailwind CSS",
       "JWT",
+      "NX Monorepo",
     ],
     duration: "Client: Moestay via ThinQ Technologies",
     links: null,
   },
+
   {
-    title: "TailMate | Complete Pet Care Ecosystem",
+    title: "TailMate | Scalable Pet Care & Veterinary Platform",
     description:
-"Designed and developed a full-scale pet care ecosystem supporting pet adoption, selling, and intelligent matchmaking, along with real-time veterinary consultations. Implemented Socket.IO for live chat and notifications, Redis for session and OTP caching, and WebRTC for audio/video consultations. Built secure role-based access control, admin analytics, and scalable REST APIs following clean architecture principles, deployed on Render and Vercel.",
+      "Industry-grade pet care platform enabling pet adoption, selling, and intelligent matchmaking (breeding), along with real-time veterinary video/audio consultations using WebRTC. Implemented Redis for OTP/session caching and performance optimization, Stripe for secure payment handling, and Socket.IO for real-time chat and notifications. Built with clean RESTful API mapping, SOLID principles, OOP-driven design, and layered architecture (controller-service-repository). Features role-based access control, admin analytics, vet earnings management, and scalable cloud deployment on Render and Vercel.",
     technologies: [
       "React",
       "TypeScript",
       "Node.js",
+      "Express.js",
       "MongoDB",
       "Redis",
       "Socket.IO",
+      "WebRTC",
       "Stripe",
-      "Vercel",
+      "Tailwind CSS",
+      "Cloudinary",
       "JWT",
       "Render",
+      "Vercel",
     ],
     links: {
       github: "https://github.com/Razirasheed03/Tailmate",
       live: "https://tailmate-care.vercel.app",
     },
   },
+
   {
-    title: "ServiceLink | Service Listing Platform",
-   description:
-"Developed a service booking platform where end users can browse and book services for free, while service providers subscribe via monthly plans to get listed. Implemented Stripe-based subscription billing with plan validation, expiry handling, and access control. Built secure authentication, role-based authorization, and scalable REST APIs, collaborating within a team using Git-based workflows.",
+    title: "MediSync | EMR & Appointment Management System",
+    description:
+      "Enterprise-grade Electronic Medical Records and appointment management platform supporting Super Admin, Doctor, and Receptionist roles. Engineered secure JWT authentication, RBAC, dynamic doctor scheduling, and conflict-free appointment booking with database-level validation. Implemented Socket.IO-powered real-time updates, Zod request validation, layered architecture, and scalable REST APIs with feature-based frontend architecture using TanStack Query.",
     technologies: [
-        "TypeScript",
       "React",
-      "Redux Toolkit",
+      "TypeScript",
       "Node.js",
+      "Express.js",
       "MongoDB",
-      "Stripe",
+      "Mongoose",
+      "Tailwind CSS",
+      "TanStack Query",
       "Socket.IO",
       "JWT",
+      "Zod",
+      "Vite",
     ],
     links: {
-      github: "https://github.com/Razirasheed03/servicelink-platform",
-      live: "https://servicelink.vercel.app",
+      github: "https://github.com/Razirasheed03/medisync",
+      live: "https://medisync-emr.vercel.app/",
     },
   },
 
-  // ---- Extra 2 (View more) ----
+  // ---- Extra 3 (View more) ----
+  {
+    title: "CreditFlow | AI Financial Audit Platform",
+    description:
+      "Engineered an AI-powered financial audit platform enabling businesses to upload financial documents and generate intelligent audit reports. Implemented secure authentication, role-based access control, structured audit workflows, and Supabase-backed data management. Designed scalable data models, AI-assisted report generation, and modern full-stack architecture focused on performance, maintainability, and production-ready workflows.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Tailwind CSS",
+      "JWT",
+      "AI",
+    ],
+    links: {
+      github: "https://github.com/Razirasheed03/creditflow",
+      live: "https://creditflow-audit.vercel.app",
+    },
+  },
   {
     title: "VoteStream | Live Polling Platform",
-   description:
-"Implemented a real-time polling and voting platform enabling live audience engagement. Built dynamic poll creation, voting, and result updates using Socket.IO. Integrated secure user authentication, role-based poll management, and real-time data synchronization to ensure low-latency updates across devices.",
+    description:
+      "Built a real-time polling platform enabling live audience participation with low-latency vote synchronization using Socket.IO. Engineered dynamic poll creation, Firebase authentication, role-based poll management, and instant result broadcasting while ensuring data consistency across concurrent users through optimized real-time communication.",
     technologies: [
       "Next.js",
       "Socket.IO",
       "Node.js",
       "MongoDB",
       "JWT",
-      "Firebase"
+      "Firebase",
     ],
     links: {
       github: "https://github.com/Razirasheed03/votestream",
       live: "https://votestream.in",
     },
   },
-    {
+  {
+    title: "ServiceLink | Subscription-Based Service Platform",
+    description:
+      "Engineered a SaaS-based service marketplace where customers discover and book services while providers subscribe through recurring Stripe billing to access the platform. Implemented subscription lifecycle management, automated plan expiry, secure authentication, RBAC, and scalable REST APIs following modular backend architecture. Collaborated within a Git-based team workflow to deliver production-ready business features.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Redux Toolkit",
+      "Stripe",
+      "Socket.IO",
+      "JWT",
+    ],
+    links: {
+      github: "https://github.com/Razirasheed03/servicelink-platform",
+    },
+  },
+
+  {
     title: "CaseVerse | E-commerce Platform",
     description:
-"Built a complete e-commerce application featuring user authentication, product listings, cart management, order processing, and Razorpay payment integration. Developed an admin panel for managing products, categories, and orders, along with analytics dashboards. Implemented secure JWT-based authentication and scalable backend APIs using Node.js, Express.js, and MongoDB.",
+      "Built a production-ready e-commerce platform featuring secure JWT authentication, product catalog management, shopping cart, order lifecycle handling, and Razorpay payment integration. Engineered scalable REST APIs, role-based admin operations, inventory management, and analytics dashboards following modular backend architecture and maintainable business logic.",
     technologies: [
       "JavaScript",
       "Node.js",
@@ -151,6 +205,14 @@ export default function AllProjectsPage() {
         return <SiNodedotjs className="text-green-600" />;
       case "MongoDB":
         return <SiMongodb className="text-green-500" />;
+      case "Mongoose":
+        return <SiMongoose className="text-red-500" />;
+      case "TanStack Query":
+        return <SiReactquery className="text-red-400" />;
+      case "Zod":
+        return <SiZod className="text-blue-600" />;
+      case "Vite":
+        return <SiVite className="text-purple-500" />;
       case "Redux Toolkit":
       case "RTK Query":
         return <SiRedux className="text-purple-500" />;
@@ -176,6 +238,8 @@ export default function AllProjectsPage() {
         return <SiVercel />;
       case "TypeScript":
         return <SiTypescript className="text-blue-500"/>;
+         case "NestJS":
+        return <SiNestjs className="text-red-500"/>;
       default:
         return <SiJavascript className="text-yellow-500"/>;
     }
@@ -219,7 +283,7 @@ export default function AllProjectsPage() {
                   </CardHeader>
 
                   <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground ">
                       {project.description}
                     </p>
                   </CardContent>

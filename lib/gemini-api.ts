@@ -2,63 +2,108 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const PERSONAL_INFO = `
 Name: Muhammed Razi P P
-Role: Full Stack MERN Developer
-Experience: 1.5+ years of hands-on experience with additional freelance industrial experience as a frontend developer
-Contact: +91 6235009441 | razirasheed03@gmail.com
-LinkedIn: linkedin.com/in/razirasheed
-GitHub: github.com/razirasheed03
+
+Role:
+Full Stack Developer
+
+Experience:
+2+ years of hands-on experience building scalable web applications. Currently working as a Freelance Full Stack Developer with ThinQ Technologies, contributing to both frontend and backend development for production applications.
+
+Contact:
++91 6235009441
+razirasheed03@gmail.com
+
+LinkedIn:
+linkedin.com/in/razirasheed
+
+GitHub:
+github.com/Razirasheed03
 
 Professional Summary:
-Passionate MERN Stack Developer with strong experience in building scalable, user-centric web applications. Proficient in JavaScript, React.js, Next.js, Node.js, Express.js, and MongoDB. Experienced in both full stack and frontend-focused roles, including freelance project work. Quick learner with a strong focus on clean architecture, performance optimization, and production-ready solutions.
+Full Stack Developer specializing in React, Next.js, Node.js, Express.js, TypeScript, and MongoDB. Experienced in designing scalable REST APIs, implementing JWT authentication, role-based access control, real-time applications, and modern full-stack architectures. Passionate about clean code, software architecture, performance optimization, and building production-ready applications.
 
 Technical Skills:
-Frontend: React.js, Next.js, Redux Toolkit, RTK Query, HTML, CSS, Tailwind CSS, Bootstrap  
-Backend: JavaScript, TypeScript, Node.js, Express.js  
-Databases: MongoDB, PostgreSQL, Firebase  
-Integrations & APIs: Razorpay, Stripe, Nodemailer, Multer, Cloudinary, Socket.IO, WebRTC, Mapbox  
-DevOps & Deployment: Docker, Nginx, AWS, Vercel, Render  
-Tools: Git, GitHub, Postman, Figma, VS Code  
-Core Knowledge: Data Structures & Algorithms
+
+Frontend:
+React.js, Next.js, TypeScript, Redux Toolkit, RTK Query, HTML, CSS, Tailwind CSS
+
+Backend:
+Node.js, Express.js, JavaScript, TypeScript
+
+Database:
+MongoDB, Firebase, Supabase, Redis
+
+Integrations:
+Stripe, Razorpay, Socket.IO, WebRTC, Mapbox API, Cloudinary
+
+DevOps:
+Docker, Jenkins, Nginx, AWS (EC2, S3), Render, Vercel
+
+Tools:
+Git, GitHub, Postman, Swagger, Figma
 
 Projects:
 
-1. TailMate | Complete Pet Care Ecosystem:
-- Developed a full-fledged pet care platform enabling pet adoption, selling, and intelligent matchmaking.
-- Implemented location-based pet discovery using Mapbox for geospatial search.
-- Built real-time chat and notification system using Socket.IO.
-- Integrated WebRTC-based audio/video consultations for veterinary appointments.
-- Designed scalable backend architecture using repository pattern, service layers, and dependency injection.
-- Developed role-based admin dashboard for managing users, vets, bookings, commissions, and moderation.
-- Implemented JWT-based authentication with role-based access control.
-- Deployed backend on Render and frontend on Vercel with Dockerized services.
+1. TailMate | Scalable Pet Care & Veterinary Platform
+- Industry-grade pet care ecosystem supporting adoption, marketplace listings, matchmaking, and veterinary consultations.
+- Implemented Redis for OTP/session caching and performance optimization.
+- Integrated WebRTC for audio/video consultations.
+- Built real-time chat and notifications using Socket.IO.
+- Implemented Stripe payment gateway.
+- Designed layered backend architecture following SOLID principles.
+- Built scalable REST APIs with JWT authentication and RBAC.
+- Developed admin analytics and vet earnings management.
+- Deployed on Render and Vercel using Docker.
 
-2. CaseVerse | E-commerce Application:
-- Built a complete e-commerce platform using Node.js, Express.js, and MongoDB with MVC architecture.
-- Implemented session-based authentication, OTP verification, and password recovery.
-- Integrated Razorpay, COD, and wallet-based payment systems.
-- Developed admin panel for product, category, and order management with analytics.
-- Implemented product search, filtering, wishlist, and return/refund workflows.
+2. MediSync | EMR & Appointment Management System
+- Enterprise-grade Electronic Medical Records platform.
+- Implemented JWT authentication with role-based access control.
+- Built doctor scheduling and conflict-free appointment booking.
+- Added Socket.IO powered real-time appointment updates.
+- Used Zod validation and layered backend architecture.
+- Developed dashboards for Super Admin, Doctor, and Receptionist roles.
 
-3. Mini Projects:
-- Netflix Clone: Built using React.js and Firebase with authentication and responsive UI using Tailwind CSS.
-- OLX Clone: Developed a marketplace application using React.js and Tailwind CSS with user authentication and listing features.
+3. CreditFlow | AI Financial Audit Platform
+- Built an AI-powered financial audit platform using Next.js and Supabase.
+- Implemented secure authentication and audit workflows.
+- Added AI-assisted financial report generation.
+- Designed scalable full-stack architecture with production-ready workflows.
+
+4. VoteStream | Live Polling Platform
+- Developed a real-time polling platform using Socket.IO.
+- Implemented Firebase authentication and live vote synchronization.
+- Built role-based poll management with low-latency updates.
+
+5. CaseVerse | E-commerce Platform
+- Developed a full-featured e-commerce platform.
+- Integrated Razorpay payments.
+- Built admin dashboard and analytics.
+- Implemented JWT authentication and scalable REST APIs.
 
 Professional Experience:
 
-Frontend Developer (Freelance)
-ThinQ Technologies (Freelance Project – Client: Moestay)
-Dec 2025 – Feb 2026
-- Built and maintained scalable frontend interfaces using Next.js and TypeScript.
-- Integrated backend REST APIs using RTK Query for efficient data fetching and caching.
-- Implemented secure client-side authentication flows using JWT access and refresh tokens.
-- Developed reusable UI components and maintained consistent UX across application workflows.
-- Collaborated with backend and design teams to deliver production-ready frontend features.
+Full Stack Developer
+ThinQ Technologies (Freelance)
+Client: Moestay
+
+Dec 2025 - Present
+
+- Started as a Frontend Developer and later transitioned into a Full Stack role.
+- Built scalable frontend applications using Next.js and TypeScript.
+- Integrated REST APIs using RTK Query.
+- Engineered backend features within a NestJS NX monorepo.
+- Built role-based workflows across frontend and backend.
+- Delivered production-ready full-stack features for property onboarding, booking, and admin modules.
 
 Education:
-MERN Stack Development (2024 – Present)
-Brototype Calicut
 
-Higher Secondary Education – Computer Science (2022 – 2024)
+BS Degree in Data Science and Applications (Pursuing)
+IIT Madras
+
+MERN Stack Development
+Brototype
+
+Higher Secondary Education - Computer Science
 Sacred Heart Higher Secondary School, Kannur
 `;
 
@@ -90,10 +135,10 @@ export async function getGeminiResponse(
 
     Recent conversation:
     ${recentMessages
-      .map(
-        (msg) => `${msg.sender === "user" ? "User" : "Assistant"}: ${msg.text}`
-      )
-      .join("\n")}
+        .map(
+          (msg) => `${msg.sender === "user" ? "User" : "Assistant"}: ${msg.text}`
+        )
+        .join("\n")}
 
     User's latest question: ${userMessage}
 

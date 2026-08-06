@@ -33,46 +33,46 @@ export default function Experience() {
       <h2 className="text-3xl font-bold text-center">Experience</h2>
 
       <Card className="bg-card/50 backdrop-blur-sm border-muted">
-        <CardHeader className="flex flex-row items-center gap-4">
-          <div className="bg-primary/10 p-3 rounded-full">
-            <BriefcaseIcon className="h-6 w-6 text-primary" />
-          </div>
-          <div>
-            <CardTitle>Frontend Developer</CardTitle>
-            <p className="text-sm text-muted-foreground">
-          ThinQ Technologies (Freelance Project - Client: Moestay) • Dec 2025 - Feb 2026
-            </p>
-          </div>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>
-              • Developed responsive and scalable frontend interfaces for
-              an Airbnb-style property booking platform using Next.js and TypeScript
-            </li>
-            <li>
-              • Implemented API integrations using RTK Query for efficient data fetching, caching, and state synchronization
-            </li>
-            <li>
-              • Built reusable UI components and page layouts following industry-standard frontend architecture and best practices
-            </li>
-            <li>
-              • Implemented secure client-side authentication flows using JWT access and refresh tokens
-            </li>
-            <li>
-              • Worked across property onboarding, booking workflows, and admin-related views with consistent UX patterns
-            </li>
-            <li>
-              • Consumed and mapped backend REST APIs based on documented endpoint contracts
-            </li>
-            <li>
-              • Collaborated closely with backend and design teams to convert business requirements into production-ready UI features
-            </li>
-            <li>
-              • Applied responsive design techniques and frontend performance optimizations for smooth cross-device experience
-            </li>
-          </ul>
-        </CardContent>
+       <CardHeader className="flex flex-row items-center gap-4">
+  <div className="bg-primary/10 p-3 rounded-full">
+    <BriefcaseIcon className="h-6 w-6 text-primary" />
+  </div>
+  <div>
+    <CardTitle>Full Stack Developer</CardTitle>
+    <p className="text-sm text-muted-foreground">
+      ThinQ Technologies (Freelance) • Client: Moestay • Dec 2025 – Present
+    </p>
+  </div>
+</CardHeader>
+
+<CardContent>
+  <ul className="space-y-2 text-muted-foreground">
+    <li>
+      • Started as a Frontend Developer and later transitioned into a Full Stack role, contributing across both frontend and backend development
+    </li>
+    <li>
+      • Developed scalable frontend interfaces using <strong>Next.js</strong> and <strong>TypeScript</strong> for an Airbnb-style property booking platform
+    </li>
+    <li>
+      • Integrated REST APIs using <strong>RTK Query</strong> with optimized caching, state synchronization, and efficient data fetching
+    </li>
+    <li>
+      • Engineered backend features within a <strong>NestJS NX Monorepo</strong>, contributing to production-ready business workflows
+    </li>
+    <li>
+      • Built reusable UI components, role-based workflows, and property onboarding features following modular architecture
+    </li>
+    <li>
+      • Implemented secure JWT authentication flows and collaborated on scalable API-driven business logic
+    </li>
+    <li>
+      • Worked across property onboarding, booking lifecycle, and admin modules while maintaining clean, maintainable code
+    </li>
+    <li>
+      • Collaborated with cross-functional teams to deliver production-ready full-stack features in an agile development environment
+    </li>
+  </ul>
+</CardContent>
       </Card>
     </motion.div>
   );

@@ -167,35 +167,73 @@ export default function Chatbot() {
     <>
       <AnimatePresence>
         {isInitialPopupOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-24 right-6 max-w-xs bg-card rounded-lg shadow-lg border border-primary/20 p-4 z-40"
-          >
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-2 right-2 h-6 w-6"
-              onClick={closeInitialPopup}
+          <>
+            {/* ── Mobile popup (compact, < md) ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.25 }}
+              className="md:hidden fixed bottom-[5.5rem] right-4 w-[268px] bg-card rounded-xl shadow-md border border-primary/20 px-3 py-2.5 z-40"
             >
-              <XIcon className="h-3 w-3" />
-            </Button>
-            <p className="text-sm">
-              Hi there! 👋 I'm Buddy, Muhammed Razi's AI assistant. Chat with
-              me to learn more about his skills and experience!
-            </p>
-            <Button
-              className="w-full mt-3"
-              size="sm"
-              onClick={() => {
-                setIsOpen(true);
-                closeInitialPopup();
-              }}
+              <button
+                onClick={closeInitialPopup}
+                className="absolute top-2 right-2 h-5 w-5 flex items-center justify-center rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                aria-label="Close"
+              >
+                <XIcon className="h-3 w-3" />
+              </button>
+
+              <p className="text-sm font-semibold pr-5 leading-tight">
+                👋 Chat with Buddy
+              </p>
+              <p className="text-xs text-muted-foreground mt-0.5 leading-snug">
+                Ask about my skills, projects &amp; experience.
+              </p>
+
+              <Button
+                className="w-full mt-2 h-7 text-xs"
+                size="sm"
+                onClick={() => {
+                  setIsOpen(true);
+                  closeInitialPopup();
+                }}
+              >
+                Start Chat
+              </Button>
+            </motion.div>
+
+            {/* ── Desktop popup (unchanged, ≥ md) ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              className="hidden md:block fixed bottom-24 right-6 max-w-xs bg-card rounded-lg shadow-lg border border-primary/20 p-4 z-40"
             >
-              Start chatting
-            </Button>
-          </motion.div>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-2 right-2 h-6 w-6"
+                onClick={closeInitialPopup}
+              >
+                <XIcon className="h-3 w-3" />
+              </Button>
+              <p className="text-sm">
+                Hi there! 👋 I'm Buddy, Muhammed Razi's AI assistant. Chat with
+                me to learn more about his skills and experience!
+              </p>
+              <Button
+                className="w-full mt-3"
+                size="sm"
+                onClick={() => {
+                  setIsOpen(true);
+                  closeInitialPopup();
+                }}
+              >
+                Start chatting
+              </Button>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
 

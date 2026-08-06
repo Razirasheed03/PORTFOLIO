@@ -35,6 +35,11 @@ import {
   SiNetlify,
   SiJsonwebtokens,
   SiRedis,
+  SiMongoose,
+  SiReactquery,
+  SiVite,
+  SiZod,
+  SiNestjs,
 } from "react-icons/si";
 import { FaAws, FaExternalLinkAlt } from "react-icons/fa";
 
@@ -42,18 +47,17 @@ const projects = [
   {
     title: "Moestay Property Booking Platform",
     description:
-      "Worked as a frontend developer responsible for building and maintaining scalable user interfaces using Next.js. Implemented API integrations using RTK Query for efficient data fetching, caching, and state management, ensuring smooth and consistent data flow across the application. Followed industry-standard coding practices to build reusable components, handle role-based UI flows, and optimize performance. Collaborated closely with backend and design teams to translate business requirements into scalable, production-ready user interfaces while maintaining consistent design patterns across all modules.",
+      "Contributed as a Full Stack Developer to an Airbnb-style property booking platform, engineering scalable frontend modules with Next.js and backend services within a NestJS NX monorepo. Designed reusable, role-driven UI components and integrated REST APIs via RTK Query for optimized caching and state synchronization. Delivered property onboarding, booking workflows, and production-grade business logic following modular architecture, API-first development, and clean code practices across the full stack.",
     technologies: [
       "Next.js",
       "TypeScript",
-      "Redux Toolkit",
+      "NestJS",
       "RTK Query",
+      "Redux Toolkit",
       "Tailwind CSS",
       "JWT",
+      "NX Monorepo",
       "REST APIs",
-      "Netlify",
-      "Swagger",
-      "Github",
     ],
     duration: "Client: Moestay via ThinQ Technologies",
     links: null,
@@ -61,24 +65,18 @@ const projects = [
   {
     title: "TailMate | Scalable Pet Care & Veterinary Platform",
     description:
-      "Industry-grade pet care platform enabling pet adoption, selling, and matchmaking (breeding), along with real-time veterinary video/audio consultations using WebRTC. Implemented Redis for OTP/session caching and performance optimization, Stripe for secure payment handling, and Socket.IO for real-time chat and notifications. Built with clean RESTful API mapping, SOLID principles, OOP-driven design, and layered architecture (controller-service-repository). Features role-based access control, admin analytics, vet earnings management, and scalable cloud deployment on Render and Vercel.",
+      "Industry-grade pet care platform supporting pet adoption, selling, and matchmaking, with real-time veterinary video/audio consultations via WebRTC. Implemented Redis for OTP/session caching, Stripe for secure payments, and Socket.IO for live chat and notifications. Built on a layered controller-service-repository architecture following SOLID and OOP principles, featuring role-based access control, admin analytics, vet earnings management, and Cloudinary-backed media handling.",
     technologies: [
       "React",
       "TypeScript",
-      "Express.js",
       "Node.js",
+      "Express.js",
       "MongoDB",
       "Redis",
       "Socket.IO",
       "WebRTC",
       "Stripe",
-      "Tailwind CSS",
-      "Multer",
       "Cloudinary",
-      "Axios",
-      "Brevo Mailer",
-      "Render",
-      "Vercel",
       "JWT",
     ],
     links: {
@@ -87,27 +85,25 @@ const projects = [
     },
   },
   {
-    title: "ServiceLink | Service Booking Platform",
+    title: "MediSync | EMR & Appointment Management System",
     description:
-      "Service discovery and booking platform where end users can browse and book services at no cost, while service providers purchase monthly membership subscriptions to get listed on the platform. Implemented Stripe-based recurring subscription billing exclusively for servicemen, including plan validation, access control, and expiry handling. Built secure JWT authentication, role-based authorization, and scalable RESTful APIs following SOLID principles and OOP-based clean architecture. Developed as a group project, collaborating with a team using Git-based workflows and coordinated feature development.",
+      "Enterprise-grade Electronic Medical Records and appointment management system for clinics, supporting Super Admin, Doctor, and Receptionist roles with JWT access/refresh authentication. Features dynamic slot generation with overlap-safe concurrent booking enforced at the database level, full appointment lifecycle management, audit logging, and real-time updates via Socket.IO. Built on a layered Express architecture with Zod validation and a feature-based React SPA using TanStack Query for server state.",
     technologies: [
       "React",
-      "Redux Toolkit",
       "TypeScript",
-      "Express.js",
       "Node.js",
+      "Express.js",
       "MongoDB",
-      "Stripe",
+      "Mongoose",
       "Socket.IO",
-      "Tailwind CSS",
-      "Axios",
-      "Nodemailer",
+      "TanStack Query",
+      "Zod",
       "JWT",
       "Vercel",
     ],
     links: {
-      github: "https://github.com/Razirasheed03/servicelink-platform",
-      live: "https://servicelink.vercel.app",
+      github: "https://github.com/Razirasheed03/medisync",
+      live: "https://medisync-emr.vercel.app/",
     },
   },
 ];
@@ -135,6 +131,14 @@ export default function Projects() {
         return <SiExpress className="text-gray-400" />;
       case "MongoDB":
         return <SiMongodb className="text-green-500" />;
+      case "Mongoose":
+        return <SiMongoose className="text-red-500" />;
+      case "TanStack Query":
+        return <SiReactquery className="text-red-400" />;
+      case "Zod":
+        return <SiZod className="text-blue-600" />;
+      case "Vite":
+        return <SiVite className="text-purple-500" />;
       case "PostgreSQL":
         return <SiPostgresql className="text-blue-600" />;
       case "TypeScript":
@@ -187,6 +191,8 @@ export default function Projects() {
         return <SiGithub className="text-white-400" />;
         case "Redis":
           return <SiRedis className="text-white-400"/>
+            case "NestJS":
+                  return <SiNestjs className="text-red-500"/>;
       default:
         return <SiReact className="text-blue-400" />;
     }

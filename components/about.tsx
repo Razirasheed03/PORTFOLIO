@@ -6,8 +6,8 @@ export default function About() {
   const [displayText, setDisplayText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
-  const fullText ="I am a self-taught Full Stack Developer with 1.5+ years of hands-on experience and 2 months of industrial experience working as a freelance Frontend Developer. I primarily focus on building scalable frontend applications using React and Next.js, with strong experience in API integration and collaborating with freelance teams on large-scale projects. I am passionate about creating user-centric web applications and have worked across frontend development, backend integration, deployment, and testing for production-ready products."
-    
+const fullText =
+  "I am a Full Stack Developer with 2+ years of hands-on experience building scalable web applications using React, Next.js, Node.js, Express.js, TypeScript, and MongoDB. I enjoy engineering production-ready applications with clean architecture, secure REST APIs, real-time communication, and modern development practices. Passionate about solving complex problems and continuously learning new technologies, I focus on building performant, maintainable, and user-centric software that delivers real business value.";
   const typingSpeed = 50;
   const cursorBlinkSpeed = 500;
 
